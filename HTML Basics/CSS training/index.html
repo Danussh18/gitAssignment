@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Basics</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body onload="loadFunction()">
+
+    <button class="tablink" onclick="openPage('HOME',this,'green')">HOME</button>
+    <button class="tablink" onclick="openPage('LOGIN',this,'red')" id="defaultOpen">LOGIN</button>
+    <button class="tablink" onclick="openPage('ANIMATION',this,'yellow')">ANIMATION</button>
+    <button class="tablink" onclick="openPage('MEDIAQUERY',this,'orange')">MEDIA QUERY</button>
+
+    <div id="LOGIN" class="tabcontent ">
+        <h2>Login</h2>
+        <div class="login-container" id="LOGIN_ID">
+            <label>User Name</label> <input onchange="onInputChange()" id="USERNAME" type="email"><br>
+            <label>Password</label> <input type="password" oninput="onKeyDownFunction()"> <br>
+            <button>Login</button>
+        </div>
+    </div>
+
+    <div id="HOME" class="tabcontent">
+        <h3>Home</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p class="change-color1" onmouseout="changeColor1()" >
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+        <P class="change-color" onmouseover="changeColor()" >
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+            original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </P>
+
+        <table id="TABLE">
+            <caption>Table 1.1 Customers</caption>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Berglunds snabbköp</td>
+              <td>Christina Berglund</td>
+              <td>Sweden</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            </table>
+
+            <img src="./APPLE.jpg" alt="apple">
+
+            <div style="display: flex;">
+                <input onFocus="onInputFocus()"></input>
+                <select style="display: none;" id="OPTION-DROPDOWN">
+                  <option>Option1</option>
+                  <option>Option2</option>
+                </select>
+                <button onclick="onButtonClick()" id="BUTTON_1">
+                  Click me!
+                </button>
+            </div>
+
+    </div>
+
+    <div id="ANIMATION" class="tabcontent">
+        <h3>ANIMATION</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+        <button onclick="advancedJS()" >ClickMe</button>
+    </div>
+
+    <div id="MEDIAQUERY" class="tabcontent">
+        <h3>MEDIAQUERY</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
